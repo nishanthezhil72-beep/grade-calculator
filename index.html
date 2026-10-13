@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple student grade calculator built with HTML, CSS, and JavaScript.">
+  <title>Grade Calculator</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <p class="eyebrow">STUDENT TOOL</p>
+      <h1>Grade Calculator</h1>
+      <p class="subtitle">Enter your subject marks and calculate your total, average, and grade.</p>
+    </header>
+    <section class="card" aria-labelledby="marks-heading">
+      <div class="section-heading">
+        <h2 id="marks-heading">Your marks</h2>
+        <p>Enter marks between 0 and 100.</p>
+      </div>
+      <form id="grade-form">
+        <div class="subject-grid">
+          <div class="field"><label for="subject1">Subject 1</label><input id="subject1" type="number" min="0" max="100" step="any" placeholder="e.g. 85" required></div>
+          <div class="field"><label for="subject2">Subject 2</label><input id="subject2" type="number" min="0" max="100" step="any" placeholder="e.g. 76" required></div>
+          <div class="field"><label for="subject3">Subject 3</label><input id="subject3" type="number" min="0" max="100" step="any" placeholder="e.g. 92" required></div>
+          <div class="field"><label for="subject4">Subject 4</label><input id="subject4" type="number" min="0" max="100" step="any" placeholder="e.g. 68" required></div>
+          <div class="field"><label for="subject5">Subject 5</label><input id="subject5" type="number" min="0" max="100" step="any" placeholder="e.g. 81" required></div>
+        </div>
+        <p class="error-message" id="error-message" role="alert" aria-live="polite"></p>
+        <div class="actions">
+          <button type="submit" class="button button-primary">Calculate grade</button>
+          <button type="reset" class="button button-secondary">Clear marks</button>
+        </div>
+      </form>
+    </section>
+    <section class="card results" id="results" aria-labelledby="results-heading" hidden>
+      <div class="section-heading"><h2 id="results-heading">Your results</h2><p>Here is your performance summary.</p></div>
+      <div class="result-grid">
+        <article class="result-box"><span class="result-label">Total marks</span><strong id="total-result">0 / 500</strong></article>
+        <article class="result-box"><span class="result-label">Average</span><strong id="average-result">0%</strong></article>
+        <article class="result-box result-highlight"><span class="result-label">Grade</span><strong id="grade-result">-</strong></article>
+      </div>
+      <p class="feedback" id="feedback-result"></p>
+      <p class="grade-note">Grade scale: A (90–100), B (80–89.99), C (70–79.99), D (60–69.99), E (50–59.99), F (below 50).</p>
+    </section>
+    <footer><p>Built with HTML, CSS, and JavaScript · Beginner project</p></footer>
+  </main>
+</body>
+</html>
